@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.employeeapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>EmployeeApp</name>
+    <description>Employee Management System</description>
+    <author email="you@example.com">Your Name</author>
+    <content src="index.html" />
+    <allow-navigation href="*" />
+    <allow-intent href="*" />
+    <access origin="*" />
+    <platform name="android">
+        <icon density="mdpi" src="res/mipmap-mdpi/ic_launcher.png" />
+        <icon density="hdpi" src="res/mipmap-hdpi/ic_launcher.png" />
+        <icon density="xhdpi" src="res/mipmap-xhdpi/ic_launcher.png" />
+        <icon density="xxhdpi" src="res/mipmap-xxhdpi/ic_launcher.png" />
+        <icon density="xxxhdpi" src="res/mipmap-xxxhdpi/ic_launcher.png" />
+        
+        <preference name="SplashScreen" value="splash" />
+        <preference name="SplashScreenDelay" value="3000" />
+        <preference name="FadeSplashScreenDuration" value="1000" />
+        <preference name="SplashMaintainAspectRatio" value="true" />
+        
+        <splash density="port-mdpi" src="res/screens/android/splash-mdpi.png" />
+        <splash density="port-hdpi" src="res/screens/android/splash-hdpi.png" />
+        <splash density="port-xhdpi" src="res/screens/android/splash-xhdpi.png" />
+        <splash density="port-xxhdpi" src="res/screens/android/splash-xxhdpi.png" />
+        <splash density="port-xxxhdpi" src="res/screens/android/splash-xxxhdpi.png" />
+
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+        <config-file parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
+    </platform>
+</widget>
